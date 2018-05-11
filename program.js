@@ -2,7 +2,7 @@ var http = require('http');
 var server = http.createServer();
 
 server.on('request', function (request, response) {
-	response.setHeader("Content Type", "text/html; charset=utf-8");
+	response.setHeader("Content-Type", "text/html; charset=utf-8");
 	if (request.method === 'GET' && request.url === '/hello') {
 		response.write('<h1>HELLO WORLD!</h1>');
 		response.end();
